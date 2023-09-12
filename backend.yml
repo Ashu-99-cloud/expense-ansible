@@ -48,6 +48,7 @@
 
     - name: Start backend service
       ansible.builtin.systemd:
-        name: restarted
+        name: backend
+        state: restarted
         enabled: yes
         daemon-reload: yes
