@@ -11,6 +11,12 @@
     src: expense.conf
     dest: /etc/nginx/default.d/expense.conf
 
+
+- name: Update Nginx Config file
+  ansible.builtin.template:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
+
 - name: Include application Pre-requisites
   ansible.builtin.import_role:
     name: common
